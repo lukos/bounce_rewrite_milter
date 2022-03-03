@@ -8,7 +8,7 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-20.04'
-container: 'rust-latest'
+container: 'rust:latest'
 
 steps:
 - script: rustup component add clippy
