@@ -13,7 +13,10 @@ container: 'rust:latest'
 steps:
 - script: rustup component add clippy
   displayName: Install clippy
-- bash: sudo apt-get install libmilter-dev
+- bash: |
+    apt-get update
+    apt-get install sudo -y
+    sudo apt-get install libmilter-dev -y
   displayName: Install libmilter
 - script: cargo clippy --all
   displayName: Run clippy
