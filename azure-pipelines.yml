@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-20.04'
+container: 'rust-latest'
+
+steps:
+- script: rustup component add clippy
+  displayName: Install clippy
+- script: cargo clippy --all
+  displayName: Run clippy
+- script: cargo build --all
+  displayName: Cargo build
