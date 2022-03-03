@@ -1,0 +1,14 @@
+[package]
+name = "bounce_rewrite_milter"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+authors = ["Luke Briner"]
+description = "A sendmial compatible milter for postfix to specify what to use for the return path"
+readme = "README.md"
+homepage = "https://github.com/lukos/bounce_rewrite_milter"
+repository = "https://github.com/lukos/bounce_rewrite_milter"
+
+[dependencies]
+milter = "0.2.4"
+libc = "0.2"
